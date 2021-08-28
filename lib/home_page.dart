@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'Inquiry/Inquiry_add_edit.dart';
 import 'controller/pagination_controller.dart';
 
 class HomePage extends StatelessWidget {
@@ -60,6 +61,14 @@ class HomePage extends StatelessWidget {
               },
               controller: _controller.sc,
             )),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // Add your onPressed code here!
+            Get.to(Inquiry_add_edit());
+          },
+          child: const Icon(Icons.add),
+          backgroundColor: Colors.pink,
+        ),
       ),
     );
   }
